@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}/}spring.log}"/>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{36} [%line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="R" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_FILE}.log</File>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{36} [%line] - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <maxHistory>90</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="R"/>
+    </root>
+
+    <logger name="noModule" level="info"/>
+    <logger name="org.codehaus" level="info"/>
+    <logger name="org.apache" level="info"/>
+    <logger name="org.springframework" level="info"/>
+    <logger name="net.sf.ehcache" level="info"/>
+    <logger name="druid.sql" level="info"/>
+    <logger name="com.alibaba" level="info"/>
+    <logger name="com.demo" level="debug"/>
+</configuration>

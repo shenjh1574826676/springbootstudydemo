@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript"  src="./jquery.min.js"></script>
+    <script type="text/javascript"  src="/cszhzfmispro/analytics.js"></script>
+    <script type="text/javascript"  src="./pageoffice.js" id="po_js_main"></script>
+</head >
+<body >
+<!--<a href="javascript: ">123123</a>-->
+
+</body >
+<script type="text/javascript">
+var tmpId = '[[${id}]]';
+var tempJson = {
+    caseInfo: {
+        incidentTime: '2019-08-08 08:08:08',
+        caseNo: '2019080808',
+        partyType: 1,
+        partyName: '王某某',
+        partySex: 1,
+        partySexName: '男',
+        partyIdsType: 161,
+        partyMobile: '137715832364',
+        partyIds: '320511196706307212',
+        partyAddress: '苏州',
+        incidentPlace: '某某路',
+        punishmentInform: {
+            signedTime: '2019-08-08 08:08:08',
+        },
+        evidenceCollection:{
+            punishmentItems:[{
+                illegalActivities: '违法活动',
+                suitable: '某某',
+                illegalLaw: '某某条例',
+                legalBasis: '某某条例',
+                fineAmount: 200
+            }]
+        },
+        caseSummary: '某某的行为',
+        source: 330,
+        agentPersonNameList: ['张某', '李某'],
+        isHearing: '82',
+        informant: '梁某',
+        informantMobile: '13781074575',
+        inChargePerson: '孙某',
+        uniformSocialCreditCode: '5623643453',
+        partyPost: '215400',
+        createdTime: '2019年08月08日'
+    },
+    year: 2019,
+    caseClosed: {
+        implementation: '执行完毕',
+        reconsiderationLitigationCase: '无异议'
+    },
+    printTime: {
+        punishmentInfoSignTime: '2019年08月08日',
+    },
+    casevo: {
+        incidentTime: '2019-08-08 08:08:08',
+        caseNo: '2019080808',
+        partyType: 1,
+        partyName: '王某某',
+        partySex: 1,
+        partySexName: '男',
+        partyIdsType: 161,
+        partyMobile: '137715832364',
+        partyIds: '320511196706307212',
+        partyAddress: '苏州',
+        incidentPlace: '某某路',
+        caseSummary: '某某的行为',
+        source: 330,
+        agentPersonNameList: ['张某', '李某'],
+        isHearing: '82',
+        informant: '梁某',
+        informantMobile: '13781074575',
+        inChargePerson: '孙某',
+        uniformSocialCreditCode: '5623643453',
+        partyPost: '215400',
+        createdTime: '2019年08月08日'
+    },
+    caseSourceName: '民众举报',
+    selectDate: '2019年08月08日',
+    nowTime: '2019年08月08日',
+    preview: true,
+    p: 'preview'
+};
+
+
+
+    setTimeout(load,500);
+    function load() {
+        $.ajax({
+        url: "/cszhzfmispro/docTemplate/token?id=" + tmpId,
+        type: "get",
+         success: function (res) {
+                    if (res.success) {
+                        var token = res.token;
+                        token = encodeURIComponent(token);
+                        POBrowser.openWindowModeless("/cszhzfmispro/docTemplate/edit?id=" + tmpId + "&PG_TOKEN=" + token, 'fullscreen=yes;frame=yes;', JSON.stringify(tempJson));
+                    } else {
+
+                    }
+                }
+        });
+    }
+</script>
+</html>

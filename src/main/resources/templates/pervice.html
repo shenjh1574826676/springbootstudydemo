@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="/cszhzfmispro/analytics.js"></script>
+    <script type="text/javascript" src="./pageoffice.js" id="po_js_main"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+
+    var tmpId = '[[${id}]]';
+    var flag = '[[${flag}]]';
+    var caseId = '[[${caseId}]]';
+    var simpleType = '[[${simpleType}]]';
+
+    var tempJson = {
+        caseInfo: {
+            "id": null,
+            "name": null,
+            "updatedUser": null,
+            "createdUser": null,
+            "updatedUserId": null,
+            "createdUserId": null,
+            "updatedTime": null,
+            "createdTime": null,
+            "taskId": null,
+            "nextStepUrl": null,
+            "stepName": null,
+            "type": null,
+            "caseType": null,
+            "caseTypeName": null,
+            "caseNo": null,
+            "limitDate": null,
+            "department": null,
+            "departmentName": null,
+            "town": null,
+            "townName": null,
+            "acceptDate": null,
+            "caseSource": null,
+            "caseSourceName": null,
+            "sourceName": null,
+            "sourcePhone": null,
+            "caseTime": null,
+            "caseAddress": null,
+            "caseCause": null,
+            "undertaker1": null,
+            "undertakerName1": null,
+            "undertaker2": null,
+            "undertakerName2": null,
+            "partyType": null,
+            "companyName": null,
+            "comOrgCode": null,
+            "chargerName": null,
+            "chargerDuty": null,
+            "idCardNo": null,
+            "partyName": null,
+            "partyGender": null,
+            "partyGenderName": null,
+            "partyAge": null,
+            "phone": null,
+            "partyAddress": null,
+            "caseDetail": null,
+            "illegalAct": null,
+            "advise": null,
+            "temporaryFlag": null,
+            "caseStatus": null,
+            "handleStatus": null,
+            "attachments": [{
+                "id": null,
+                "name": "",
+                "updatedUser": null,
+                "createdUser": null,
+                "updatedUserId": null,
+                "createdUserId": null,
+                "updatedTime": null,
+                "createdTime": null,
+                "taskId": null,
+                "nextStepUrl": null,
+                "stepName": null,
+                "linkedId": null,
+                "attachmentName": null,
+                "attachmentUrl": null,
+                "attachmentType": null,
+                "attachmentTypeName": null,
+                "attachmentTypeCount": null,
+                "step": null,
+                "uploadTime": null,
+                "isTransfer": null,
+                "nullObject": false
+            }, {
+                "id": null,
+                "name": null,
+                "updatedUser": null,
+                "createdUser": null,
+                "updatedUserId": null,
+                "createdUserId": null,
+                "updatedTime": null,
+                "createdTime": null,
+                "taskId": null,
+                "nextStepUrl": null,
+                "stepName": null,
+                "linkedId": null,
+                "attachmentName": null,
+                "attachmentUrl": null,
+                "attachmentType": null,
+                "attachmentTypeName": null,
+                "attachmentTypeCount": null,
+                "step": null,
+                "uploadTime": null,
+                "isTransfer": null,
+                "nullObject": false
+            }, {
+                "id": null,
+                "name": null,
+                "updatedUser": null,
+                "createdUser": null,
+                "updatedUserId": null,
+                "createdUserId": null,
+                "updatedTime": null,
+                "createdTime": null,
+                "taskId": null,
+                "nextStepUrl": null,
+                "stepName": null,
+                "linkedId": null,
+                "attachmentName": null,
+                "attachmentUrl": null,
+                "attachmentType": null,
+                "attachmentTypeName": null,
+                "attachmentTypeCount": null,
+                "step": null,
+                "uploadTime": null,
+                "isTransfer": null,
+                "nullObject": false
+            }],
+            "approvals": [{
+                "id": null,
+                "name": null,
+                "updatedUser": null,
+                "createdUser": null,
+                "updatedUserId": null,
+                "createdUserId": null,
+                "updatedTime": null,
+                "createdTime": null,
+                "taskId": null,
+                "nextStepUrl": null,
+                "stepName": null,
+                "caseId": null,
+                "caseHisId": null,
+                "approvalStep": null,
+                "approvalUser": null,
+                "approvalTime": null,
+                "approvalOpinion": null,
+                "approvalResult": null,
+                "nullObject": false
+            }],
+            "lawEnforApproval": null,
+            "lawEnForInvestigationEntity": {
+                "id": null,
+                "name": "",
+                "updatedUser": null,
+                "createdUser": null,
+                "updatedUserId": null,
+                "createdUserId": null,
+                "updatedTime": null,
+                "createdTime": null,
+                "taskId": null,
+                "nextStepUrl": null,
+                "stepName": null,
+                "caseId": null,
+                "investigationPerson": "6",
+                "investigationPersonName": null,
+                "investigationDate": null,
+                "investigationResult": null,
+                "isCrime": null,
+                "factualEvidence": null,
+                "transferUnit": null,
+                "companyName": null,
+                "transferDate": null,
+                "clueContent": null,
+                "transferMethod": null,
+                "transferType": null,
+                "temporaryFlag": null,
+                "deleteFlag": null,
+                "freeze": null,
+                "attachmentList": [{
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "linkedId": null,
+                    "attachmentName": null,
+                    "attachmentUrl": null,
+                    "attachmentType": null,
+                    "attachmentTypeName": null,
+                    "attachmentTypeCount": null,
+                    "step": null,
+                    "uploadTime": null,
+                    "isTransfer": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "linkedId": null,
+                    "attachmentName": null,
+                    "attachmentUrl": null,
+                    "attachmentType": null,
+                    "attachmentTypeName": null,
+                    "attachmentTypeCount": null,
+                    "step": null,
+                    "uploadTime": null,
+                    "isTransfer": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "linkedId": null,
+                    "attachmentName": null,
+                    "attachmentUrl": null,
+                    "attachmentType": null,
+                    "attachmentTypeName": null,
+                    "attachmentTypeCount": null,
+                    "step": null,
+                    "uploadTime": null,
+                    "isTransfer": null,
+                    "nullObject": false
+                }],
+                "auditList": [{
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "caseId": null,
+                    "investigationPerson": null,
+                    "investigationPersonName": null,
+                    "investigationDate": null,
+                    "investigationResult": null,
+                    "isCrime": null,
+                    "factualEvidence": null,
+                    "transferUnit": null,
+                    "companyName": null,
+                    "transferDate": null,
+                    "clueContent": null,
+                    "transferMethod": null,
+                    "transferType": null,
+                    "temporaryFlag": null,
+                    "deleteFlag": null,
+                    "freeze": null,
+                    "attachmentList": null,
+                    "auditList": null,
+                    "punishltemList": null,
+                    "punishmentList": null,
+                    "caseStatus": null,
+                    "handleStatus": null,
+                    "isTransfer": null,
+                    "approvalStep": null,
+                    "chiefAttachments": null,
+                    "townMayorAttachments": null,
+                    "accountId": null,
+                    "investigationId": null,
+                    "investPunishEntityList": null,
+                    "enforPenaltyHearingEntity": null,
+                    "enforPenaltyStateHisEntity": null,
+                    "hearHisEntity": null,
+                    "statementHisEntity": null,
+                    "historyType": null,
+                    "auditName": null,
+                    "auditTime": null,
+                    "auditReason": null,
+                    "auditResult": null,
+                    "hisId": null,
+                    "majorCase": null,
+                    "auditAttachmentList": null,
+                    "roleName": null,
+                    "auditRole": null,
+                    "investPunishHisList": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "caseId": null,
+                    "investigationPerson": null,
+                    "investigationPersonName": null,
+                    "investigationDate": null,
+                    "investigationResult": null,
+                    "isCrime": null,
+                    "factualEvidence": null,
+                    "transferUnit": null,
+                    "companyName": null,
+                    "transferDate": null,
+                    "clueContent": null,
+                    "transferMethod": null,
+                    "transferType": null,
+                    "temporaryFlag": null,
+                    "deleteFlag": null,
+                    "freeze": null,
+                    "attachmentList": null,
+                    "auditList": null,
+                    "punishltemList": null,
+                    "punishmentList": null,
+                    "caseStatus": null,
+                    "handleStatus": null,
+                    "isTransfer": null,
+                    "approvalStep": null,
+                    "chiefAttachments": null,
+                    "townMayorAttachments": null,
+                    "accountId": null,
+                    "investigationId": null,
+                    "investPunishEntityList": null,
+                    "enforPenaltyHearingEntity": null,
+                    "enforPenaltyStateHisEntity": null,
+                    "hearHisEntity": null,
+                    "statementHisEntity": null,
+                    "historyType": null,
+                    "auditName": null,
+                    "auditTime": null,
+                    "auditReason": null,
+                    "auditResult": null,
+                    "hisId": null,
+                    "majorCase": null,
+                    "auditAttachmentList": null,
+                    "roleName": null,
+                    "auditRole": null,
+                    "investPunishHisList": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "caseId": null,
+                    "investigationPerson": null,
+                    "investigationPersonName": null,
+                    "investigationDate": null,
+                    "investigationResult": null,
+                    "isCrime": null,
+                    "factualEvidence": null,
+                    "transferUnit": null,
+                    "companyName": null,
+                    "transferDate": null,
+                    "clueContent": null,
+                    "transferMethod": null,
+                    "transferType": null,
+                    "temporaryFlag": null,
+                    "deleteFlag": null,
+                    "freeze": null,
+                    "attachmentList": null,
+                    "auditList": null,
+                    "punishltemList": null,
+                    "punishmentList": null,
+                    "caseStatus": null,
+                    "handleStatus": null,
+                    "isTransfer": null,
+                    "approvalStep": null,
+                    "chiefAttachments": null,
+                    "townMayorAttachments": null,
+                    "accountId": null,
+                    "investigationId": null,
+                    "investPunishEntityList": null,
+                    "enforPenaltyHearingEntity": null,
+                    "enforPenaltyStateHisEntity": null,
+                    "hearHisEntity": null,
+                    "statementHisEntity": null,
+                    "historyType": null,
+                    "auditName": null,
+                    "auditTime": null,
+                    "auditReason": null,
+                    "auditResult": null,
+                    "hisId": null,
+                    "majorCase": null,
+                    "auditAttachmentList": null,
+                    "roleName": null,
+                    "auditRole": null,
+                    "investPunishHisList": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "caseId": null,
+                    "investigationPerson": null,
+                    "investigationPersonName": null,
+                    "investigationDate": null,
+                    "investigationResult": null,
+                    "isCrime": null,
+                    "factualEvidence": null,
+                    "transferUnit": null,
+                    "companyName": null,
+                    "transferDate": null,
+                    "clueContent": null,
+                    "transferMethod": null,
+                    "transferType": null,
+                    "temporaryFlag": null,
+                    "deleteFlag": null,
+                    "freeze": null,
+                    "attachmentList": null,
+                    "auditList": null,
+                    "punishltemList": null,
+                    "punishmentList": null,
+                    "caseStatus": null,
+                    "handleStatus": null,
+                    "isTransfer": null,
+                    "approvalStep": null,
+                    "chiefAttachments": null,
+                    "townMayorAttachments": null,
+                    "accountId": null,
+                    "investigationId": null,
+                    "investPunishEntityList": null,
+                    "enforPenaltyHearingEntity": null,
+                    "enforPenaltyStateHisEntity": null,
+                    "hearHisEntity": null,
+                    "statementHisEntity": null,
+                    "historyType": null,
+                    "auditName": null,
+                    "auditTime": null,
+                    "auditReason": null,
+                    "auditResult": null,
+                    "hisId": null,
+                    "majorCase": null,
+                    "auditAttachmentList": null,
+                    "roleName": null,
+                    "auditRole": null,
+                    "investPunishHisList": null,
+                    "nullObject": false
+                }],
+                "punishltemList": [],
+                "punishmentList": null,
+                "caseStatus": null,
+                "handleStatus": null,
+                "isTransfer": null,
+                "approvalStep": null,
+                "chiefAttachments": null,
+                "townMayorAttachments": null,
+                "accountId": null,
+                "nullObject": false
+            },
+            "isMajor": "0",
+            "hearingStatusFlag": null,
+            "hearEntity": null,
+            "statementEntity": {
+                "isResult": null,
+                "statementContent": null,
+                "departmentContent":null
+
+            },
+            "decideEntity": {
+                "id": null,
+                "name": "",
+                "updatedUser": null,
+                "createdUser": null,
+                "updatedUserId": null,
+                "createdUserId": null,
+                "updatedTime": null,
+                "createdTime": null,
+                "taskId": null,
+                "nextStepUrl": null,
+                "stepName": null,
+                "orgId": null,
+                "caseId": null,
+                "caseStatus": null,
+                "handleStatus": null,
+                "deliveryWay": null,
+                "deliveryWayName": null,
+                "deliveryDate": null,
+                "performDate": null,
+                "deliveryResult": null,
+                "penaltyExecResult": null,
+                "attachmentList": [{
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "linkedId": null,
+                    "attachmentName": null,
+                    "attachmentUrl": null,
+                    "attachmentType": null,
+                    "attachmentTypeName": null,
+                    "attachmentTypeCount": null,
+                    "step": null,
+                    "uploadTime": null,
+                    "isTransfer": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "linkedId": null,
+                    "attachmentName": null,
+                    "attachmentUrl": null,
+                    "attachmentType": null,
+                    "attachmentTypeName": null,
+                    "attachmentTypeCount": null,
+                    "step": null,
+                    "uploadTime": null,
+                    "isTransfer": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "linkedId": null,
+                    "attachmentName": null,
+                    "attachmentUrl": null,
+                    "attachmentType": null,
+                    "attachmentTypeName": null,
+                    "attachmentTypeCount": null,
+                    "step": null,
+                    "uploadTime": null,
+                    "isTransfer": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "linkedId": null,
+                    "attachmentName": null,
+                    "attachmentUrl": null,
+                    "attachmentType": null,
+                    "attachmentTypeName": null,
+                    "attachmentTypeCount": null,
+                    "step": null,
+                    "uploadTime": null,
+                    "isTransfer": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "linkedId": null,
+                    "attachmentName": null,
+                    "attachmentUrl": null,
+                    "attachmentType": null,
+                    "attachmentTypeName": null,
+                    "attachmentTypeCount": null,
+                    "step": null,
+                    "uploadTime": null,
+                    "isTransfer": null,
+                    "nullObject": false
+                }],
+                "nullObject": false
+            },
+            "caseOnCloseEntity": {
+                "id": null,
+                "name": "",
+                "updatedUser": null,
+                "createdUser": null,
+                "updatedUserId": null,
+                "createdUserId": null,
+                "updatedTime": null,
+                "createdTime": null,
+                "taskId": null,
+                "nextStepUrl": null,
+                "stepName": null,
+                "caseId": null,
+                "closeDate": null,
+                "reconsider": null,
+                "attachments": [{
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "linkedId": null,
+                    "attachmentName": null,
+                    "attachmentUrl": null,
+                    "attachmentType": "1",
+                    "attachmentTypeName": null,
+                    "attachmentTypeCount": null,
+                    "step": null,
+                    "uploadTime": null,
+                    "isTransfer": null,
+                    "nullObject": true
+                }],
+                "caseCloseApproveEntityList": [{
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "caseId": null,
+                    "reviewPerson": null,
+                    "reviewDate": null,
+                    "reviewAdvice": null,
+                    "reviewResult": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "caseId": null,
+                    "reviewPerson": null,
+                    "reviewDate": null,
+                    "reviewAdvice": null,
+                    "reviewResult": null,
+                    "nullObject": false
+                }, {
+                    "id": null,
+                    "name": "",
+                    "updatedUser": null,
+                    "createdUser": null,
+                    "updatedUserId": null,
+                    "createdUserId": null,
+                    "updatedTime": null,
+                    "createdTime": null,
+                    "taskId": null,
+                    "nextStepUrl": null,
+                    "stepName": null,
+                    "caseId": null,
+                    "reviewPerson": null,
+                    "reviewDate": null,
+                    "reviewAdvice": null,
+                    "reviewResult": null,
+                    "nullObject": false
+                }],
+                "nullObject": false
+            },
+            "isInClose": null,
+            "enforInvestigationEntity": {
+                "isHearing":null
+            },
+            "documentCaseNo": null,
+            "documentPunishNo": null,
+            "caseOnFileEntity": {
+                "archiveDate": null,
+                "underTakeAuthority":null,
+                "archiveNumber":null
+            },
+            "nullObject": false
+        },
+        closeJldAuditDate:null,
+        townFlag:null,
+        casePunishType:null,
+        year:null,
+        caseHappenMonth:null,
+        sumAmountString:null,
+        closeSfsAuditDate:null,
+        isStreet:null,
+        caseType:null,
+        todayMonth:null,
+        closeTownAuditDate:null,
+        todayYear:null,
+        todayDay:null,
+        caseHappenDay:null,
+        caseHappenYear:null,
+        transferFileList:[],
+        dataList:[]
+
+    }
+
+    var simpleJson = {
+        caseInfo:{
+            acceptDate: null,
+            attachments: [],
+            bank: null,
+            bankAccount: null,
+            caseAddress: null,
+            caseDetail: null,
+            caseNo: null,
+            caseSource: null,
+            caseSourceName: null,
+            caseStatus: null,
+            caseStatusName: null,
+            caseTime: null,
+            caseType: null,
+            caseTypeName: null,
+            chargerDuty: null,
+            chargerName: null,
+            comOrgCode: null,
+            companyName: null,
+            createdTime: null,
+            createdUser: null,
+            createdUserId: null,
+            department: null,
+            departmentName: null,
+            documentPunishNo: null,
+            hasPayFlag: null,
+            id: null,
+            idCardNo: null,
+            illegalAct: null,
+            isAbandoned: null,
+            latLon: null,
+            limitDate: null,
+            name: null,
+            nextStepUrl: null,
+            nullObject: null,
+            partyAddress: null,
+            partyAge: null,
+            partyGender: null,
+            partyGenderName: null,
+            partyName: null,
+            partyType: null,
+            payment: null,
+            paymentLimitDate: null,
+            penalties: [],
+            phone: null,
+            punishmentNo: null,
+            reason: null,
+            simpleCaseFile: {
+                handlingOrganization:null,
+                archiveNumber:null,
+                summary:null
+            },
+            sourceName: null,
+            sourcePhone: null,
+            stepName: null,
+            taskId: null,
+            temporaryFlag: null,
+            town: null,
+            townName: null,
+            undertaker1: null,
+            undertaker2: null,
+            undertakerName1: null,
+            undertakerName2: null,
+            updatedTime: null,
+            updatedUser: null,
+            updatedUserId: null,
+            userSignature: null,
+            closeJldAuditDate:null,
+            townFlag:null,
+            casePunishType:null,
+            year:null,
+            caseHappenMonth:null,
+            sumAmountString:null,
+            closeSfsAuditDate:null,
+            isStreet:null,
+            todayMonth:null,
+            closeTownAuditDate:null,
+            todayYear:null,
+            todayDay:null,
+            caseHappenDay:null,
+            caseHappenYear:null,
+            transferFileList:[],
+            dataList:[],
+            punishmentItem:{
+                punishmentBasis:null,
+                illegalAct:null
+            }
+        }
+    }
+
+
+
+    setTimeout(load, 500);
+
+    function load() {
+        if (flag == 'test') {
+            var data = tempJson;
+            if(tmpId == 11 || tmpId == 13){
+                data = simpleJson;
+            }
+            $.ajax({
+                url: "/cszhzfmispro/docTemplate/render/preview",
+                data: JSON.stringify({id: tmpId, data: JSON.stringify(data), caseId: caseId, flag: flag}),
+                contentType: "application/json",
+                dataType: "json",
+                type: "POST",
+                success: function (data) {
+                    if (data.success) {
+                        var token = data.token;
+                        var file = data.data;
+                        token = encodeURIComponent(token);
+                        file = encodeURIComponent(file);
+                        POBrowser.openWindowModeless("/cszhzfmispro/docTemplate/preview?id=" + tmpId + "&data=" + file + "&flag=" + flag + "&PG_TOKEN=" + token, 'fullscreen=yes;frame=yes;', 'width=1440px;height=860px');
+                    } else {
+
+                    }
+
+                }
+            });
+        } else if (flag == 'dev') {
+            if (tmpId == 1) {
+                $.ajax({
+                    url: "/cszhzfmispro/secured/acceptance/query",
+                    data: {caseId: caseId},
+                    dataType: "json",
+                    type: "POST",
+                    success: function (data) {
+                        if (data.code == "0000") {
+                            $.ajax({
+                                url: "/cszhzfmispro/docTemplate/render/preview",
+                                data: JSON.stringify({
+                                    id: tmpId,
+                                    data: JSON.stringify(data.record),
+                                    caseId: caseId,
+                                    flag: flag
+                                }),
+                                contentType: "application/json",
+                                dataType: "json",
+                                type: "POST",
+                                success: function (data) {
+                                    if (data.success) {
+                                        var token = data.token;
+                                        var file = data.data;
+                                        token = encodeURIComponent(token);
+                                        file = encodeURIComponent(file);
+                                        POBrowser.openWindowModeless("/cszhzfmispro/docTemplate/preview?id=" + tmpId + "&data=" + file + "&flag=" + flag + "&PG_TOKEN=" + token, 'fullscreen=yes;frame=yes;', 'width=1440px;height=860px');
+                                    } else {
+
+                                    }
+
+                                }
+                            });
+                        }
+                    }
+                });
+            } else if (tmpId == 2) {
+                $.ajax({
+                    url: "/cszhzfmispro/secured/lawEnforApproval/print/case/info",
+                    data: {caseId: caseId},
+                    dataType: "json",
+                    type: "POST",
+                    success: function (data) {
+                        if (data.code == "0000") {
+                            $.ajax({
+                                url: "/cszhzfmispro/docTemplate/render/preview",
+                                data: JSON.stringify({
+                                    id: tmpId,
+                                    data: JSON.stringify(data.record),
+                                    caseId: caseId,
+                                    flag: flag
+                                }),
+                                contentType: "application/json",
+                                dataType: "json",
+                                type: "POST",
+                                success: function (data) {
+                                    if (data.success) {
+                                        var token = data.token;
+                                        var file = data.data;
+                                        token = encodeURIComponent(token);
+                                        file = encodeURIComponent(file);
+                                        POBrowser.openWindowModeless("/cszhzfmispro/docTemplate/preview?id=" + tmpId + "&data=" + file + "&flag=" + flag + "&PG_TOKEN=" + token, 'fullscreen=yes;frame=yes;', 'width=1440px;height=860px');
+                                    } else {
+
+                                    }
+
+                                }
+                            });
+                        }
+                    }
+                });
+            } else if (tmpId == 3 || tmpId == 4 || tmpId == 6 || tmpId == 9 || tmpId == 10) {
+                $.ajax({
+                    url: "/cszhzfmispro/secured/investigation/queryPrintTransferCaseInfoByCaseId",
+                    data: {caseId: caseId},
+                    dataType: "json",
+                    type: "GET",
+                    success: function (data) {
+                        if (data.code == "0000") {
+                            $.ajax({
+                                url: "/cszhzfmispro/docTemplate/render/preview",
+                                data: JSON.stringify({
+                                    id: tmpId,
+                                    data: JSON.stringify(data.record),
+                                    caseId: caseId,
+                                    flag: flag
+                                }),
+                                contentType: "application/json",
+                                dataType: "json",
+                                type: "POST",
+                                success: function (data) {
+                                    if (data.success) {
+                                        var token = data.token;
+                                        var file = data.data;
+                                        token = encodeURIComponent(token);
+                                        file = encodeURIComponent(file);
+                                        POBrowser.openWindowModeless("/cszhzfmispro/docTemplate/preview?id=" + tmpId + "&data=" + file + "&flag=" + flag + "&PG_TOKEN=" + token, 'fullscreen=yes;frame=yes;', 'width=1440px;height=860px');
+                                    } else {
+
+                                    }
+
+                                }
+                            });
+                        }
+                    }
+                });
+            } else if (tmpId == 5) {
+                $.ajax({
+                    url: "/cszhzfmispro/secured/apply/queryPunishDecideCase",
+                    data: {caseId: caseId},
+                    dataType: "json",
+                    type: "GET",
+                    success: function (data) {
+                        if (data.code == "0000") {
+                            $.ajax({
+                                url: "/cszhzfmispro/docTemplate/render/preview",
+                                data: JSON.stringify({
+                                    id: tmpId,
+                                    data: JSON.stringify(data.record),
+                                    caseId: caseId,
+                                    flag: flag
+                                }),
+                                contentType: "application/json",
+                                dataType: "json",
+                                type: "POST",
+                                success: function (data) {
+                                    if (data.success) {
+                                        var token = data.token;
+                                        var file = data.data;
+                                        token = encodeURIComponent(token);
+                                        file = encodeURIComponent(file);
+                                        POBrowser.openWindowModeless("/cszhzfmispro/docTemplate/preview?id=" + tmpId + "&data=" + file + "&flag=" + flag + "&PG_TOKEN=" + token, 'fullscreen=yes;frame=yes;', 'width=1440px;height=860px');
+                                    } else {
+
+                                    }
+
+                                }
+                            });
+                        }
+                    }
+                });
+            } else if (tmpId == 8) {
+                $.ajax({
+                    url: "/cszhzfmispro/secured/caseClose/printCaseQuery",
+                    data: {caseId: caseId},
+                    dataType: "json",
+                    type: "POST",
+                    success: function (data) {
+                        if (data.code == "0000") {
+                            console.log(data);
+                            $.ajax({
+                                url: "/cszhzfmispro/docTemplate/render/preview",
+                                data: JSON.stringify({
+                                    id: tmpId,
+                                    data: JSON.stringify(data.record),
+                                    caseId: caseId,
+                                    flag: flag
+                                }),
+                                contentType: "application/json",
+                                dataType: "json",
+                                type: "POST",
+                                success: function (data) {
+                                    if (data.success) {
+                                        var token = data.token;
+                                        var file = data.data;
+                                        token = encodeURIComponent(token);
+                                        file = encodeURIComponent(file);
+                                        POBrowser.openWindowModeless("/cszhzfmispro/docTemplate/preview?id=" + tmpId + "&data=" + file + "&flag=" + flag + "&PG_TOKEN=" + token, 'fullscreen=yes;frame=yes;', 'width=1440px;height=860px');
+                                    } else {
+
+                                    }
+
+                                }
+                            });
+                        }
+                    }
+                });
+            } else if (tmpId == 11 || tmpId == 13) {
+                $.ajax({
+                    url: "/cszhzfmispro/secured/simpleNew/query",
+                    data: {caseId: caseId},
+                    dataType: "json",
+                    type: "POST",
+                    success: function (data) {
+                        if (data.code == "0000") {
+                            $.ajax({
+                                url: "/cszhzfmispro/docTemplate/render/preview",
+                                data: JSON.stringify({
+                                    id: tmpId,
+                                    data: JSON.stringify(data.record),
+                                    caseId: caseId,
+                                    flag: flag,
+                                    simpleType: simpleType
+                                }),
+                                contentType: "application/json",
+                                dataType: "json",
+                                type: "POST",
+                                success: function (data) {
+                                    if (data.success) {
+                                        var token = data.token;
+                                        var file = data.data;
+                                        token = encodeURIComponent(token);
+                                        file = encodeURIComponent(file);
+                                        POBrowser.openWindowModeless("/cszhzfmispro/docTemplate/preview?id=" + tmpId + "&data=" + file + "&flag=" + flag + "&PG_TOKEN=" + token, 'fullscreen=yes;frame=yes;', 'width=1440px;height=860px');
+                                    } else {
+
+                                    }
+
+                                }
+                            });
+                        }
+                    }
+                });
+            } else if (tmpId == 12) {
+                $.ajax({
+                    url: "/cszhzfmispro/secured/caseOnFile/print/query",
+                    data: {caseId: caseId},
+                    dataType: "json",
+                    type: "POST",
+                    success: function (data) {
+                        if (data.code == "0000") {
+                            $.ajax({
+                                url: "/cszhzfmispro/docTemplate/render/preview",
+                                data: JSON.stringify({
+                                    id: tmpId,
+                                    data: JSON.stringify(data.record),
+                                    caseId: caseId,
+                                    flag: flag
+                                }),
+                                contentType: "application/json",
+                                dataType: "json",
+                                type: "POST",
+                                success: function (data) {
+                                    if (data.success) {
+                                        var token = data.token;
+                                        var file = data.data;
+                                        token = encodeURIComponent(token);
+                                        file = encodeURIComponent(file);
+                                        POBrowser.openWindowModeless("/cszhzfmispro/docTemplate/preview?id=" + tmpId + "&data=" + file + "&flag=" + flag + "&PG_TOKEN=" + token, 'fullscreen=yes;frame=yes;', 'width=1440px;height=860px');
+                                    } else {
+
+                                    }
+
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+
+        }
+
+
+    }
+</script>
+</html>
